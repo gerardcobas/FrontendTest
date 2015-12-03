@@ -21,7 +21,6 @@ We will only evaluate the client side code and the criteria will be based mainly
 ## NOT REQUIRED, BUT IMPRESSIVE
 
 - Adding Unit Testing
-- Good use of libraries
 - Good use of pure Javascript language
 
 
