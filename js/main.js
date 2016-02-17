@@ -22,10 +22,11 @@ var repos = 'https://api.github.com/users/'+ document.getElementById('inputuser'
 
 var responseInsideDiv = document.getElementById("apiObject");
     responseInsideDiv.innerHTML = "<div class='userLogin'>\@" + apiObject.login +  "</div>";
-    responseInsideDiv.innerHTML += "<h1 class='nameUser'>" + apiObject.name +  "</h1>" + "<div><img src="+apiObject.avatar_url + "/></div>";
-    responseInsideDiv.innerHTML +="<div><span>" + apiObject.bio + "</span></div>";
-    responseInsideDiv.innerHTML +="<div>"  + apiRepos[0].name + "</div>";
-    repostotal
+    responseInsideDiv.innerHTML += "<div><h1 class='nameUser'>" + apiObject.name +  "</h1></div>" + "<div class='imgUser'><img src="+apiObject.avatar_url + "/></div>";
+    responseInsideDiv.innerHTML +="<div><span class='bio'>" + apiObject.bio + "</span></div>";
+    responseInsideDiv.innerHTML +="<div class='nameRepos'>"  + apiRepos[0].name + "</div>";
+    responseInsideDiv.innerHTML +="<div class='forks'>"  + apiRepos[0].forks + "</div>";
+    responseInsideDiv.innerHTML +="<div class='star'>"  + apiRepos[0].stargazers_count + "</div>";
 
 
     return responseInsideDiv;

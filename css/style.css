@@ -6,10 +6,29 @@
     height: 50px;
     padding: 20px;
 
-
 }
+
 .userLogin{
     font-style: italic;
+    padding-left: 40px;
+}
+#apiObject{
+    float: left;
+    margin: 5px 15px 15px 15px;
+}
+span.bio {
+    display: inline;
+    position: relative;
+    top: -50px;
+    left: 40px;
+}
+img{
+    position: relative;
+    top: -57px;
+    left: -22px;
+    width: 50px;
+    height: 50px;
+
 }
 
 .inputuser{
@@ -17,9 +36,26 @@
     font-weight: 200;
     text-align: center;
     margin: 0 0 25px;
-    overflow: hidden;
     padding: 20px;
     border: 2px solid #D8D8D8;
+}
+.star {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    top: -16px;
+}
+
+.forks {
+    display: inline-block;
+    padding-left: 100px;
+    position: relative;
+    top: -16px;
+}
+
+h1.nameUser {
+    display: inline;
+    padding-left: 40px;
 }
 
 .button{
