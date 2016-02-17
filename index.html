@@ -2,10 +2,23 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Hello!</title>
+    <title>Buscador</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<script type="text/javascript" src="js/main.js"></script>
+<h2>Search username</h2>
 
-<h1>Hello!</h1>
+<div id="search">
+    <form id="searchuser" method="get" action="">
+        <input type="text" id="inputuser" size="21" maxlength="120" placeholder="Search username ...">
+        <input type="button" value="search" class="button" onclick="searchUser()" >
+    </form>
+    <div class="clear"></div>
+
+</div>
+
+<div id="apiObject"></div>
+
 </body>
 </html>
