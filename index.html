@@ -1,11 +1,77 @@
-<!DOCTYPE html>
+<!DOCTYPE <html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Hello!</title>
-</head>
-<body>
 
-<h1>Hello!</h1>
-</body>
+	<head lang="en">
+		<meta charset="UTF-8">	
+		<title>Remi Test</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script type="text/javascript">
+				
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "https://api.github.com/users", true);
+				xhr.setRequestHeader("Content-type", "application/json");	
+					
+					xhr.onreadystatechange = function(){
+        		if(xhr.readyState==4 && xhr.status==200){
+							var data = JSON.parse(xhr.responseText);
+						};
+					};
+
+				xhr.send();
+				
+
+				function searchUser(){
+					var data = JSON.parse(xhr.responseText);
+					var userInput = document.getElementById("search").value;
+
+						var xhru = new XMLHttpRequest();
+						xhru.open("GET", "https://api.github.com/users/" + userInput);
+						xhru.setRequestHeader("Content-type", "application/json");
+
+							xhru.onreadystatechange=function(){
+		        		if(xhru.readyState==4 && xhru.status==200){
+									var user = JSON.parse(xhru.responseText);
+
+									if(usee.login !== null){
+										document.getElementById("username").innerHTML = user.login;
+										document.getElementById("fullname").innerHTML = user.name;
+										document.getElementById("repos").innerHTML = user.repos_url;
+									}else{
+											document.getElementById("error").innerHTML = "User not found";
+									};
+									
+								};
+							};
+						xhru.send();
+				};
+
+	</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h1>Remi</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 col-md-offset-3 well well-lg">
+					<form class="form-inline">
+						<div class="form-group">
+				  		<input id="search" class="form-control" type="text" value="" placeholder="Search..."></input>
+						</div>
+				  		<button class="btn btn-default" type="button" value="submit" onclick="searchUser();">Search</button>
+					</form>
+					<div id="username"></div>
+					<div id="fullname"></div>
+					<div id="repos"></div>
+					
+					<div id="error"></div>
+
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
+
