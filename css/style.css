@@ -1,0 +1,85 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.userInput{
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 0 15px;
+    padding: 20px;
+    border: 2px solid #D8D8D8;
+}
+
+.button{
+	margin-top: 10px;
+	display: inline block;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.userLogin{
+    font-style: italic;
+    padding-left: 120px;
+    margin-top: 10px;
+
+}
+
+p.bio {
+    display: inline;
+    position: relative;
+    top: -85px;
+    left: 120px;
+}
+
+img{
+    position: relative;
+    top: -57px;   
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+h2 {
+    color: black;
+    margin-left: 5px;
+}
+
+h2.userName {
+    display: inline;
+    padding-left: 120px;
+}
+
+
+.search{
+    margin-top:5px;
+}
+
+
+
+#searchResult{
+	background-color: white;
+	border-radius: 10px;
+}
+
+.problem{
+	margin-top: 5px;
+	background-color: rgba(255, 10, 10, 0.65);
+	border-radius: 10px;
+}
