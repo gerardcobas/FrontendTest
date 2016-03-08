@@ -7,9 +7,10 @@
 
 We will only evaluate the client side code and the criteria will be based mainly on:
 
-1. Clean, maintainable & easy­to­read
-2. Good architectural practices
-3. Clean HTML and CSS markup
+1. Good use of **pure Javascript** language without additional frameworks
+2. Clean HTML and CSS markup
+3. Clean, maintainable & easy­to­read
+4. Good architectural practices
 
 ## HOW TO START
 
@@ -21,7 +22,6 @@ We will only evaluate the client side code and the criteria will be based mainly
 ## NOT REQUIRED, BUT IMPRESSIVE
 
 - Adding Unit Testing
-- Good use of pure Javascript language
 
 
 ## SCREENSHOTS
