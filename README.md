@@ -7,7 +7,7 @@
 
 We will only evaluate the client side code and the criteria will be based mainly on:
 
-1. Good use of **pure Javascript** language without additional frameworks
+1. Good use of **pure Javascript** language without external libraries and frameworks like jQuery, React...
 2. Clean HTML and CSS markup
 3. Clean, maintainable & easy­to­read
 4. Good architectural practices
