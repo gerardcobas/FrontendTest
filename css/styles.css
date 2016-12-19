@@ -1,0 +1,168 @@
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body{
+  background:#F0F0F0;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin:0 auto;
+  padding-bottom: 25px;
+  width: 410px;
+  height: auto;
+  background: white;
+  border-radius: 12px;
+  -webkit-box-shadow: 10px 10px 6px 0 rgba(222,222,222,1);
+  -moz-box-shadow: 10px 10px 6px 0 rgba(222,222,222,1);
+  box-shadow: 10px 10px 6px 0 rgba(222,222,222,1);
+}
+
+.container .error {
+  display: none;
+  margin: 15px 25px 0 25px;
+}
+
+.container .error.active {
+  display: block;
+}
+
+.container .error .error-message {
+  color: #9B2C33;
+  padding: 21px 0 21px 17px;
+  background-color: #FBDEDE;
+  border: 1px solid #E3C7C7;
+  border-radius: 4px;
+}
+
+.container .search-area{
+  padding: 28px 0 0 25px;
+}
+
+.container .search-area input {
+  width: 275px;
+  height: 36px;
+  font-size: 14px;
+  border: 1px solid #B7B1B0;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+.container .search-area button {
+  padding: 10px;
+  height: 40px;
+  border: 1px solid #B7B1B0;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #F5F5F5; /* For browsers that do not support gradients */    
+  background: -webkit-linear-gradient(white, #F5F5F5); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #F5F5F5); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #F5F5F5); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to white, #F5F5F5); /* Standard syntax (must be last) */
+}
+
+.container #user-informations {
+  display: none;
+}
+
+.container #user-informations.active {
+  display: block;
+}
+
+
+.container .user-details {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+  display: flex;
+}
+
+.container .user-details .user-details-img {
+  display: inline-block;
+  width: 75px;
+}
+
+.container .user-details .user-details-img img {
+  width: 75px;
+  height: 75px;
+  border-radius: 4px;
+}
+
+.container .user-details .user-details-infos {
+  min-height: 75px;
+  display: inline-block;
+  max-width: 280px;
+  padding-left: 16px;
+  color: #1f1d1b;
+  font-size: 14px;
+}
+
+.container .user-details .user-details-infos h1 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.container .user-details .user-details-infos p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.container .user-repositories {
+  display: block;
+  margin: 15px 25px 0 25px;
+}
+
+.container .user-repositories h4{
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #6F6F6F;
+  margin: 0;
+  font-weight: 500;
+  color: #1f1d1b;
+}
+
+.container .user-repositories ul {
+  list-style: none;
+  max-height: 220px;
+  overflow-y: scroll;
+  padding-left: 0;
+  margin: 0;
+}
+
+.container .user-repositories ul li{
+  border-bottom: 0.5px solid #DBDBDB;
+  color: #1f1d1b;
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
+
+.container .user-repositories ul li .repository-info{
+  display: inline-block;
+  float: right;
+  padding-right: 14px;
+}
+
+.container .user-repositories ul li .repository-info span{
+  display: inline-block;
+  padding-right: 5px;
+  font-size: 14px;
+}
+
+.container .user-repositories ul li .repository-name {
+  display: inline-block;
+  padding-left: 14px;
+  font-weight: 500;
+}

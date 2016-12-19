@@ -1,49 +1,18 @@
 # JuniorFrontendTest
 
-## GOALS
+Hello I'm Pedro, this is my implementation of the challenge. As requested I only used pure Javascript and CSS, typically I work woth frameworks over these technologies such as SASS, React or Angular.
 
+Sorry for the delay, the challenge took me nearly 12 hours todo, as I need to study the Github API, and I only coded like 1/2 hours per night after the work. 
 
-#### The main goal of this tech test is to create a client side web application that reproduces the screenshots below by using [GitHub API](https://developer.github.com/v3/) .
+Regarding the implementation, to run it you just need to do the following steps
 
-We will only evaluate the client side code and the criteria will be based mainly on:
+1. npm install to install some dependencies of the proeject 
+2. npm run start to run create a local server to the page
+3. npm test - (optional) to run the some unit tests that I created.
 
-1. Good use of **pure Javascript** language without external libraries and frameworks like jQuery, React...
-2. Clean HTML and CSS markup
-3. Clean, maintainable & easy­to­read
-4. Good architectural practices
+If you have any doubts please feel free to let me know or make a code review with me.
 
-## HOW TO START
+Best regards,
 
-1. Investigate the github api calls for user and repos (for example: test them in the browser)
-2. Fork this repository & cd into the directory
-3. Launch the web application, for example with: python -m SimpleHTTPServer 1337
-4. Open the browser with http://localhost:1337/ and start coding!
-
-## NOT REQUIRED, BUT IMPRESSIVE
-
-- Adding Unit Testing. External libraries limitation doesn't apply here, you can use Jasmine, Karma...
-
-
-## SCREENSHOTS
-
-#### First Screen
-
-The user can search a username of GitHub
-
-![](https://github.com/gerardcobas/JuniorFrontendTest/blob/master/images/First-Screen.png)
-
-#### Success Screen
-
-If the searched username does exist: The searched user profile is displayed with all his repositories
-
-![](https://github.com/gerardcobas/JuniorFrontendTest/blob/master/images/Success-screen.png)
-
-#### Error Screen
-
-If the searched username does not exist: An error is shown
-
-![](https://github.com/gerardcobas/JuniorFrontendTest/blob/master/images/Error-screen.png)
-
-
-
+Pedro Mira Lopes
 

@@ -1,0 +1,25 @@
+{
+  "name": "github-user-searcher",
+  "version": "1.0.0",
+  "description": "Javascript test for a junior fron-end developer at Marfeel",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest",
+    "start": "python -m SimpleHTTPServer 1337"
+  },
+  "author": "Pedro Mira Lopes",
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.8.2",
+    "jasmine": "^2.5.2",
+    "jest": "^18.0.0",
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "csslint": "^1.0.5",
+    "jest-cli": "^18.0.0",
+    "jshint": "^2.9.4",
+    "jslint": "^0.10.3",
+    "octicons": "^5.0.1"
+  }
+}

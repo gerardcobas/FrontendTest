@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+  <head>
     <meta charset="UTF-8">
-    <title>Hello!</title>
-</head>
-<body>
-
-<h1>Hello!</h1>
-</body>
+    <title>User Search</title>
+    <script src="js/searcher.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="search-area">
+          <input id="searchField" type="text" name="search" placeholder="Search username..." />
+          <button type="submit" onClick="validateForm()">Search</button>
+        </div>
+        <div id="user-informations">
+          <div class="user-details">
+            <div id="userImg" class="user-details-img">
+            </div>
+            <div class="user-details-infos">
+              <span id="username">@Username</span>
+              <h1 id="fullName">Full Name</h1>
+              <p id="bio">User's biography</p>
+            </div>
+          </div>
+          <div class="user-repositories">
+            <h4>Repositories</h4>
+            <ul id="repositories">
+            </ul>
+          </div>
+        </div>
+        <div class="error" id="error-container">
+          <div class="error-message"> Does not exist </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
