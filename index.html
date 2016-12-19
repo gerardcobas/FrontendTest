@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Hello!</title>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Github Search</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
 <body>
+    <div class="shadowElement center" id="shadowElement"></div>
+    <div id="userWrapper" class="userWrapper cornerShape center">
 
-<h1>Hello!</h1>
+        <form id="form" class="form">
+            <input type="text" id="searchUsername" placeholder="Search Username..." class="searchBox">
+            <input type="submit" id="submit" class="submit" value="Search">
+        </form>
+
+        <div id="userProfile" class="userProfile hide">
+            <div id="imgWrapper" class="imgWrapper">
+                <img src="" alt="" id="img">
+            </div>
+            <div class="userInfo">
+                <p id="username" class="username"></p>
+                <p id="fullName" class="fullName"></p>
+                <p id="bio" class="bio"></p>
+            </div>
+
+        </div>
+
+        <div id="userRepos" class="userRepos hide">
+            <h3>Repositories</h3>
+            <hr>
+            <ul id="userReposUl">
+            </ul>
+        </div>
+
+        <div id="messageWrapper" class="messageWrapper hide">
+            <div id="errorMessage" class="errorMessage">
+                <p>Does not exist</p>
+            </div>
+        </div>
+
+    </div>
+<script src="index.js"></script>
 </body>
 </html>
