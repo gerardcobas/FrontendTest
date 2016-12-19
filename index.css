@@ -1,0 +1,217 @@
+body {
+    background-color: #F0F0F0;
+    font-family: Helvetica, Arial;
+}
+
+/* ----- Search Bar ---------------*/
+
+.userWrapper {
+    display: inline-block;
+    padding: 25px;
+    width: 355px;
+    background-color: #FFFFFF;
+}
+
+.form input {
+    height: 29px;
+
+    font-size: 12px;
+    outline: none;
+}
+
+.searchBox {
+    float: left;
+    padding-left: 8px;
+    width: 269px;
+
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+}
+
+.submit {
+    height: 33px !important;
+    float: right;
+    margin-left: 6px;
+    padding: 2px 11px 4px 11px;
+
+    background-color: white;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    font-weight: 600;
+
+    box-shadow: inset 0px -55px 43px -39px #E8E8E8;
+    -webkit-box-shadow: inset 0px -55px 43px -39px #E8E8E8;
+    -moz-box-shadow: inset 0px -55px 43px -39px #E8E8E8;
+    -o-box-shadow: inset 0px -55px 43px -39px #E8E8E8;
+}
+
+/* ----- User Profile ---------------*/
+
+.userProfile {
+    clear: both;
+    padding-top: 13px;
+}
+
+.imgWrapper {  display: inline-block;  }
+
+.imgWrapper > img{
+    height: 74px;
+    width: 74px;
+
+    border-radius: 3px;
+}
+
+.userInfo {
+    display: inline-block;
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+.username {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: #333333;
+    font-size: 13px;
+    font-style: oblique;
+    font-weight: 400;
+}
+
+.fullName {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: #2D3636;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.bio {
+    margin-top: 1px;
+    margin-bottom: 0;
+
+    color: #333333;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* ----- User Repositories ---------------*/
+
+.userRepos {
+    max-height: 277px;
+    padding-top: 23px;
+}
+
+.userRepos > h3{
+    margin: 0;
+    font-size: 16px;
+}
+
+.userRepos > hr{
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    border: none;
+    color: #777777;
+    background-color: #777777;
+}
+
+.userRepos > ul {
+    margin: 0;
+    max-height:226px;
+    overflow-y: auto;
+    padding-left: 0;
+
+    list-style-type: none;
+}
+
+.userRepos li {
+    padding: 14px 0 14px 14px;
+
+    border-bottom: 1px solid #C2C2C2;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.repoImages {
+    display: inline;
+    float: right;
+    margin-top: -16px;
+    padding-right: 10px;
+    vert-align: top;
+}
+
+.repoImages > img{
+    display: inline-block;
+    height: 13px;
+}
+
+.repoImages > p {
+    display: inline-block;
+    padding: 4px;
+
+    font-size: 13px;
+    font-weight: 200;
+}
+
+/* ----- Error Message ---------------*/
+
+.messageWrapper {
+    clear: both;
+    padding-top: 13px;
+}
+
+.errorMessage {
+    margin-top: 10px;
+    padding: 17px;
+
+    background-color: #FEDCDD;
+    border: 1px solid #D4AFB0;
+    border-radius: 3px;
+    color: #A70000;
+}
+
+.errorMessage > p {
+    margin: 0;
+
+    font-size: 14px;
+    font-family: Helvetica, helvetica, Arial;
+}
+
+/* ----- Miscellaneous ---------------*/
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 5px rgba(85, 164, 239, 1),  0 0 0px 1000px white inset;
+    border: 1px solid rgba(85, 164, 239, 1);
+}
+
+.shadowElement {
+    width: 404px;
+    height: 82px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 5px 12px 25px  rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    5px 12px 25px  rgba(50, 50, 50, 0.5);
+    box-shadow:         5px 12px 25px rgba(50, 50, 50, 0.5);
+}
+
+.cornerShape {
+    -webkit-clip-path: polygon(3% 0, 97% 0, 100% 3%, 100% 97%, 97% 100%, 3% 100%, 0 97%, 0 3%);
+    clip-path: polygon(3% 0, 96% 0, 100% 3%, 100% 97%, 97% 100%, 3% 100%, 0 97%, 0 3%);
+}
