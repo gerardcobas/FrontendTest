@@ -5,10 +5,9 @@
   }
 
   Controller.prototype.updateHTML = function() {
-    element = document.getElementById('app')
+    var element = document.getElementById('app');
     element.innerHTML = this.searchView.returnHTMLSuccess();
   }
-
 
   exports.Controller = Controller;
 })(this);

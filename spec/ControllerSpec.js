@@ -25,12 +25,11 @@
         }
       }
 
-      searchViewDouble = new SearchViewDouble;
+      var searchViewDouble = new SearchViewDouble;
       controller.searchView = searchViewDouble;
       controller.updateHTML();
-      element = document.getElementById('app');
+      var element = document.getElementById('app');
       expect(element.innerHTML).toEqual(searchViewDouble.returnHTMLSuccess())
-
     })
   });
 })();

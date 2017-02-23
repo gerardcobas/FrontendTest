@@ -19,6 +19,14 @@
 <script src="src/Repository.js"></script>
 <script src="src/APIClient.js"></script>
 <script src="src/SearchView.js"></script>
+<script src="src/Controller.js"></script>
 <script src="src/index.js"></script>
+<script>
+  window.addEventListener("submit",function(event) {
+    event.preventDefault();
+    var searchText = document.getElementById('text').value;
+    console.log(searchText)
+  })
+</script>
 </body>
 </html>
