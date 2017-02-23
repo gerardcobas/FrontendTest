@@ -4,7 +4,7 @@
   }
 
   SearchView.prototype.returnHTMLSuccess = function(user) {
-    var userTag = `<h1>${user.fullName}</h1><br><h3>${user.username}</h3><br><img src=\"${user.avatar}\"><br><h1>Repositories</h1>`;
+    var userTag = `<ul class=\"list img-list\"><li><div class=\"li-img\"><img src=\"${user.avatar}\"></div><div class=\"li-text\"><p class=\"li-sub\">@${user.username}</p><h2 class=\"li-head\">${user.fullName}</h2></div></li></ul><br><h1>Repositories</h1>`;
     var repoTag = "<ul>"
     user.repositories.forEach(function(element) {
       repoTag+= `<li>${element.name} ${element.forks}<span>  ${element.stars}</li>`

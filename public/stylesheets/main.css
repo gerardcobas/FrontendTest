@@ -1,0 +1,39 @@
+.list li {
+  border-bottom: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.li-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+}
+
+.li-head {
+  margin: 0;
+}
+
+.li-sub {
+  margin: 0;
+}
+
+/*@media all and (min-width: 45em) {
+  .list li {
+    float: left;
+    width: 50%;
+  }
+}*/
+
+@media all and (min-width: 75em) {
+  .list li {
+    width: 33.33333%;
+  }
+}
