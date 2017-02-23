@@ -1,6 +1,7 @@
 (function(exports) {
-  function APIClient() {
+  function APIClient(controller) {
     self = this;
+    this.controller = controller;
   }
 
   APIClient.prototype.searchUser = function(username) {
@@ -14,13 +15,12 @@
       var user = new User(data.name, data.login, data.avatar_url)
       self.getRepositories(data.login, user);
       } else {
-        console.log("error")
+        self.controller.displayError();
         // We reached our target server, but it returned an error
       }
     };
     request.onerror = function() {
       // There was a connection error of some sort
-      console.log("uh oh")
     };
     request.send();
   }
@@ -34,11 +34,9 @@
         var data = JSON.parse(request.responseText);
         for(count=0;count < data.length; count++) {
           var repository = data[count]
-          console.log(repository)
           user.createRepository(repository.name, repository.forks_count, repository.stargazers_count)
         }
-
-    	console.log(user)
+    	self.controller.updateHTML(user);
       } else {
         console.log("error")
         // We reached our target server, but it returned an error

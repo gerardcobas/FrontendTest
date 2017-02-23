@@ -20,7 +20,7 @@
       }
 
       SearchViewDouble.prototype = {
-        returnHTMLSuccess: function() {
+        returnHTMLSuccess: function(user) {
           return "<ul><h1>fullname</h1></ul>"
         }
       }
