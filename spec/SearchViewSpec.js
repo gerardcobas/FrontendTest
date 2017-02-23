@@ -9,9 +9,33 @@
     });
 
     it("stores a user property", function() {
-      expect(searchView.user).toEqual(user)
+      expect(searchView.user).toEqual(user);
     })
 
-    
+    it("displays error message when username does not exist", function() {
+      expect(searchView.returnHTMLFail()).toEqual("<p>Does not exist</p>");
+    });
+
+    describe("User with one repository", function() {
+      beforeEach(function() {
+        var repository = {
+          name: "repository",
+          stars: 1,
+          forks: 1
+        }
+        user = {
+          fullname: "fullname",
+          username: "username",
+          avatar: "avatar_url",
+          repositories: [repository]
+        }
+      });
+
+      it("returns html with user and repository information", function() {
+        expect(searchView.returnHTMLSuccess()).toEqual("<img src=\"avatar_url\"><h3>username</h3><br><h1>fullname</h1><br>Repositories<br><h3>Repository</h3>")
+      })
+
+    })
+
   });
 })();

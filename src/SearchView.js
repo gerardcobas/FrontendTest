@@ -5,11 +5,11 @@
   }
 
   SearchView.prototype.returnHTMLSuccess = function() {
-
+    return ""
   }
 
-  SearchView.prototype.returnFailHTMLFail = function() {
-
+  SearchView.prototype.returnHTMLFail = function() {
+    return "<p>Does not exist</p>"
   }
 
   exports.SearchView = SearchView;
