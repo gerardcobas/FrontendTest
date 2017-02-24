@@ -5,12 +5,14 @@
   }
 
   Controller.prototype.updateHTML = function(user) {
-    var element = document.getElementById('app');
+    var element = document.getElementById('display');
+    element.classList.remove("error");
     element.innerHTML = this.searchView.returnHTMLSuccess(user);
   }
 
   Controller.prototype.displayError = function() {
-    var element = document.getElementById('app');
+    var element = document.getElementById('display');
+    element.className = "error";
     element.innerHTML = this.searchView.returnHTMLFail();
   }
 

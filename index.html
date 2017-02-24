@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="public/stylesheets/main.css">
 </head>
 <body>
+  <div id="layout">
+    <h1>Github API Web app</h1>
+    <form method="post">
+      <input id="text" type="text" placeholder="Search username..." required>
+      <button type="submit">Search</button>
+    </form>
 
-<h1>Hello!</h1>
-<form method="post">
-  <input id="text" type="text" placeholder="Search username..." required>
-  <button type="submit">Search</button>
-</form>
-
-<div id="app">
-</div>
+    <div id="display">
+    </div>
+  </div>
 
 <script src="src/User.js"></script>
 <script src="src/Repository.js"></script>

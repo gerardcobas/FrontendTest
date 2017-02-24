@@ -28,7 +28,7 @@
       var searchViewDouble = new SearchViewDouble;
       controller.searchView = searchViewDouble;
       controller.updateHTML();
-      var element = document.getElementById('app');
+      var element = document.getElementById('success');
       expect(element.innerHTML).toEqual(searchViewDouble.returnHTMLSuccess())
     })
   });
