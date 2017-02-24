@@ -40,8 +40,8 @@ Screenshots
 ===========
 
 First Screen
-![alt tag](./images/firstScreen)
+![alt tag](./images/firstScreen.png)
 Success Screen
-![alt tag](./images/searchSuccess)
+![alt tag](./images/searchSuccess.png)
 Error Screen
-![alt tag](./images/searchFail)
+![alt tag](./images/searchFail.png)
