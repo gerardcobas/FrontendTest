@@ -16,11 +16,10 @@
       self.getRepositories(data.login, user);
       } else {
         self.controller.displayError();
-        // We reached our target server, but it returned an error
       }
     };
     request.onerror = function() {
-      // There was a connection error of some sort
+      console.log("There was a connection error");
     };
     request.send();
   }
@@ -38,13 +37,11 @@
         }
     	self.controller.updateHTML(user);
       } else {
-        console.log("error")
-        // We reached our target server, but it returned an error
+        console.log("Not Found");
       }
     };
     request.onerror = function() {
-      // There was a connection error of some sort
-      console.log("uh oh")
+      console.log("There was a connection error");
     };
     request.send();
   }

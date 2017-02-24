@@ -21,15 +21,15 @@
 
       SearchViewDouble.prototype = {
         returnHTMLSuccess: function(user) {
-          return "<ul><h1>fullname</h1></ul>"
+          return "<ul><h1>fullname</h1></ul>";
         }
       }
 
       var searchViewDouble = new SearchViewDouble;
       controller.searchView = searchViewDouble;
       controller.updateHTML();
-      var element = document.getElementById('success');
-      expect(element.innerHTML).toEqual(searchViewDouble.returnHTMLSuccess())
+      var element = document.getElementById('display');
+      expect(element.innerHTML).toEqual(searchViewDouble.returnHTMLSuccess());
     })
   });
 })();
