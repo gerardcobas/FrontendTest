@@ -23,6 +23,8 @@ body{
     box-shadow: 10px 10px 20px -10px;
     width: 50vw;
     max-width: 50vh;
+    min-width: 275px;
+    min-height: 30px;
 }
 
 #wrapper input[type="text"]{
@@ -44,5 +46,28 @@ body{
     border: 1px solid lightgrey;
     font-weight: 600;
     color: grey;
-    width: 28%;
+    width: 27%;
+}
+
+/*result user*/
+
+#result img{
+    float: left;
+    width: 30%;
+    border-radius: 20px;
+    margin-right: 1em;
+}
+
+/*result div class for error*/
+.error{
+    background-color: indianred;
+    color: white;
+    margin-top: 1em;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+/*result div class for success*/
+.success{
+    border-radius: 10px;
 }
