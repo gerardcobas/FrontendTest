@@ -25,6 +25,7 @@ body{
     max-width: 50vh;
     min-width: 275px;
     min-height: 30px;
+    max-height: 70vh;
 }
 
 #wrapper input[type="text"]{
@@ -75,9 +76,32 @@ body{
 /*repos*/
 #repos{
     display: none;
-    margin-top: 5em;
+    max-height: 50vh;
 }
 
 .reposuccess{
-    margin-top: 1em;
+    margin-top: 3em;
+    overflow-y: scroll;
+}
+
+.repoerror{
+    background-color: indianred;
+    color: white;
+    margin-top: 5em;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.repo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.repo span{
+    margin-left: 20px;
+}
+
+.repo span img{
+    width: 20px;
 }

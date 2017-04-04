@@ -77,11 +77,11 @@ function fillReposDetails(data){
         const forks = repo.forks_count;
 
         output+= '<div class="repo"><h3>'+name+'</h3>'+
-        '<span class="rDetails">'+
-        '<p>'+stars+'</p>'+
-        '<p>'+forks+'</p>'+
-        '</span>'+
-        '<hr></div>'
+        '<div>'+
+        '<span><img src="./images/flaticonImage.png" alt="stars">'+stars+'</span>'+
+        '<span><img src="./images/code-fork-512.png"" alt="forks">'+forks+'</span>'+
+        '</div>'+
+        '</div><hr>'
     });
 
     repos.innerHTML = output;
@@ -97,7 +97,7 @@ function showError(err) {
         result.className = "error";
         result.innerHTML = "User not found";
     } else{
-        repos.className = "error";
+        repos.className = "repoerror";
         repos.innerHTML = "No repos found";
     }
 }
