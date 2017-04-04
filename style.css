@@ -1,0 +1,48 @@
+/*Setting html and body to fit all the screen*/
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Arial", sans-serif;
+}
+
+/*Center unique container with flexbox*/
+body{
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Main div and inside components*/
+#wrapper{
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -10px;
+    width: 50vw;
+    max-width: 50vh;
+}
+
+#wrapper input[type="text"]{
+    padding: 0.5em;
+    margin-right: 10px;
+    border-radius: 5px;
+    width:65%;
+    border: 1px solid lightgrey;
+    color: grey;
+    font-weight: 500;
+}
+
+#wrapper button{
+    border-radius: 5px;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: linear-gradient( to bottom, white 0%, #e2e2e2 100% );
+    border: 1px solid lightgrey;
+    font-weight: 600;
+    color: grey;
+    width: 28%;
+}
