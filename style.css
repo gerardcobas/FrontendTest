@@ -105,3 +105,7 @@ body{
 .repo span img{
     width: 20px;
 }
+
+::-webkit-scrollbar { 
+    display: none; 
+}
