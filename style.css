@@ -23,7 +23,7 @@ body{
     box-shadow: 10px 10px 20px -10px;
     width: 50vw;
     max-width: 50vh;
-    min-width: 275px;
+    min-width: 495px;
     min-height: 30px;
     max-height: 70vh;
 }
@@ -73,10 +73,16 @@ body{
     border-radius: 10px;
 }
 
+/*rep title*/
+#repTitle{
+    display: none;
+
+}
+
 /*repos*/
 #repos{
     display: none;
-    max-height: 50vh;
+    max-height: 35vh;
 }
 
 .reposuccess{
