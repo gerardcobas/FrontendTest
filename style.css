@@ -71,3 +71,13 @@ body{
 .success{
     border-radius: 10px;
 }
+
+/*repos*/
+#repos{
+    display: none;
+    margin-top: 5em;
+}
+
+.reposuccess{
+    margin-top: 1em;
+}
