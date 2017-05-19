@@ -4,11 +4,61 @@
     <meta charset="UTF-8">
     <title>Hello!</title>
     <script type="text/javascript" src="js/trial.js" async></script>
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 
-	<input type="text" id="githubUsername" name="githubUsername" placeholder="Search username...">
-	<input id="submit" type="button" value="Submit">
+	<div class="main center">
+
+		<div class="form center">
+			<div class="search">
+				<div class="search-right"><input class="search-btn btn bordered" id="submit" type="button" value="Submit"></div>
+				<div class="search-left"><input class="search-textfield bordered" type="text" id="githubUsername" name="githubUsername" placeholder="Search username..."></div>
+			</div>
+			<div class="bordered" id="alert">Does not exist!</div>
+			<div id="user-info-repos">
+				<!-- <div class="user-info">
+					<div class="github-icon">
+						<img class="bordered" src="images/github-favicon.png">
+					</div>
+					<div class="name-bio">
+						<div id="username">@username</div>
+						<div id="full-name">Full Name</div>
+						<div id="user-bio">this is the bio...</div>
+					</div>
+				</div>
+				<div class="user-repos">
+					<div id="repos-tittle">Repositories</div>
+					<ul>
+						<li>
+							<span class="repo-info">
+								<div class="repo-info-icon">
+									<img src="images/star.svg">
+								</div><div>50</div>
+								<div class="repo-info-icon">
+									<img src="images/repo-forked.svg">
+								</div><div>10</div>
+							</span>
+							<span class="repo-name">Repo1</span>
+						</li>
+						<li>
+							<span class="repo-info">
+								<div class="repo-info-icon">
+									<img src="images/star.svg">
+								</div><div>50</div>
+								<div class="repo-info-icon">
+									<img src="images/repo-forked.svg">
+								</div><div>10</div>
+							</span>
+							<span class="repo-name">Repo1</span>
+						</li>
+
+					</ul>
+				</div> -->
+			</div>
+		</div>
+
+	</div>
 
 </body>
 </html>

@@ -2,5 +2,156 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+
+   word-wrap: break-word;
+
 }
 
+#alert {
+	margin-top: 10px;
+    padding: 20px;
+    background-color: #FEDADC;
+    color: #A50000;
+    display: none;
+    border-color: #D9B9BA;
+}
+
+.center {
+    margin: auto;
+}
+
+.main {
+	margin-top: 50px;
+	width: 50%;
+}
+
+.form {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+}
+
+.form > * {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.search * {
+}
+
+.btn {
+	background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
+	background-color: #e6ebf1;
+	color: #24292e;
+	font-weight: 600;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.bordered {
+	border: 1px solid rgba(27,31,35,0.35);
+	border-radius: 5px;
+}
+
+
+.search-left {
+	margin-right: 75px;
+	overflow: hidden;
+}
+
+.search-textfield {
+	width: 100%;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.search-right {
+	float: right;
+}
+
+.user-info {
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.user-info > div {
+	display: block;
+	float: left;
+}
+
+.github-icon {
+	width: 75px;
+	height: 75px;
+}
+
+.github-icon > img {
+	max-width: 100%;
+	height: auto;
+}
+
+.name-bio {
+	margin-left: 20px;
+}
+
+#username {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+#full-name {
+	font-weight: 600;
+	font-size: 2em;
+	color: #363636;
+}
+
+#user-bio {
+	font-size: 0.9em;
+}
+
+.user-repos {
+	margin-top: 20px;
+}
+
+#repos-tittle {
+	font-weight: 600;
+	font-size: 1.2em;
+	border-bottom: 3px solid #707070;
+	padding-bottom: 10px;
+}
+
+.user-repos ul {
+	list-style-type: none;
+	margin-top: 0px;
+	padding-left: 0px;
+}
+
+.user-repos li {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid rgba(27,31,35,0.35);
+}
+
+.repo-name {
+	font-weight: 600;
+	font-size: 1.2em;
+	margin-right: 75px;
+	overflow: hidden;
+}
+
+.repo-info {
+	float: right;
+}
+
+.repo-info > div {
+	display: block;
+	float: left;
+	margin-left: 5px;
+	margin-top: 2px;
+	font-size: 0.9em;
+}
