@@ -1,6 +1,5 @@
 
-var s,
-GithubApi = {
+var GithubApi = {
 
     /* Global settings */
     settings: {
@@ -12,12 +11,11 @@ GithubApi = {
         userNotFoundMessage: "Not Found"
     },
 
-    /* Main function */
+    /* Init function */
     init: function() {
 
-        s = this.settings;
-        s.client = new this.httpClient()
-        this.bindUIActions();
+        GithubApi.settings.client = new this.httpClient()
+        this.bindUIActions()
 
     },
 
@@ -28,15 +26,15 @@ GithubApi = {
     bindUIActions: function() {
 
         // Hides user-info-repos from the document and calls 'analyzeQuery()'
-        s.submitButton.addEventListener("click", function(){
-            s.userInfoRepos.style.display = 'none'
+        GithubApi.settings.submitButton.addEventListener("click", function(){
+            GithubApi.settings.userInfoRepos.style.display = 'none'
             GithubApi.analyzeQuery()
         });
 
         // adds 'Enter' key functionality
-        s.inputUsername.addEventListener("keyup", function(event){
+        GithubApi.settings.inputUsername.addEventListener("keyup", function(event){
             event.preventDefault();
-            if (event.keyCode == 13) s.submitButton.click()
+            if (event.keyCode == 13) GithubApi.settings.submitButton.click()
         });
         
     },
@@ -46,23 +44,27 @@ GithubApi = {
 
         /* 
             pre:    
-                    'url' is a string containing the requested url
+                    'url' is a string containing a url from a valid domain
                     'callback' is a function object which will handle the request response
             post:   
                     The GET request is sent to 'url'
-                    and 'callback' is called with the received response as a parameter
+                    and 'callback' is called with the received response as a parameter.
+                    
         */
         this.get = function(url, callback) {
-            var req = new XMLHttpRequest();
-            req.onreadystatechange = function() {
-                if (req.readyState == 4) {
-                    if (req.status == 200 || req.status == 404)
-                        callback(req.responseText)
-                }
-            }
 
-            req.open("GET", url, true);            
-            req.send();
+                var req = new XMLHttpRequest();
+                req.onreadystatechange = function() {
+                    if (req.readyState == 4) {
+                        if (req.status == 200 || req.status == 404) {
+                            callback(req.responseText)
+                        }
+                    }
+                }
+
+                req.open("GET", url, true);            
+                req.send();
+
         }
     },
 
@@ -71,11 +73,11 @@ GithubApi = {
                 'callback' is a function object which will handle the json GET request response with the user info
         post:
                 the GET request is sent to fetch the user's (s.inputUsername.value) json
-                and 'callback' is called with this json as a parameter
+                and 'callback' is called with this parsed json as a parameter
     */
     searchForUser: function(callback) {
 
-        s.client.get("https://api.github.com/users/" + s.inputUsername.value, function(response) {
+        GithubApi.settings.client.get("https://api.github.com/users/" + GithubApi.settings.inputUsername.value, function(response) {
 
             // jsonize the response
             callback(JSON.parse(response));
@@ -86,14 +88,15 @@ GithubApi = {
     /*
         pre:
                 'callback' is a function object which will handle the json GET request response with the repos info
+                'GithubApi.settings.inputUsername.value' is the username of an existing Github user
         post:
                 the GET request is sent to fetch the user repos' json
-                and 'callback' is called with this json as a parameter
+                and 'callback' is called with this parsed json as a parameter
     */
     searchForRepos: function(callback) {
 
         // max 300 repositories
-        s.client.get("https://api.github.com/users/" + s.inputUsername.value + "/repos?per_page=300", function(response) {
+        GithubApi.settings.client.get("https://api.github.com/users/" + GithubApi.settings.inputUsername.value + "/repos?per_page=300", function(response) {
 
             //jsonize the response
             callback(JSON.parse(response));
@@ -108,12 +111,12 @@ GithubApi = {
                 Given the result of requesting the user information, this function decides whether
                 to show the error message (404 response) or to show the user information and repos
     */
-    analyzeQuery: function() {
+    analyzeQuery: function() {  
 
         this.searchForUser(function(jsonUser) {
 
-                if (jsonUser["message"] == s.userNotFoundMessage) // 404
-                    GithubApi.userNotFound()
+                if (jsonUser["message"] == GithubApi.settings.userNotFoundMessage) // 404
+                    GithubApi.userNotFound();
                 else 
                     GithubApi.userFound(jsonUser)
 
@@ -127,7 +130,7 @@ GithubApi = {
     */
     userNotFound: function() {
 
-        s.alertBox.style.display = 'block'
+        GithubApi.settings.alertBox.style.display = 'block'
 
     },
 
@@ -135,14 +138,16 @@ GithubApi = {
     /* 
         pre:
                 'jsonUser' is a valid json obtained from a successful (non-404) call to
-                the Github API requesting for the user info
+                the Github API requesting for the user info, and therefore containing the keys
+                'name' and 'bio'
         post: 
                 the user's name and bio is obtained from 'jsonUser' and
                 buildUserRepos() is called after getting the user repos from searchForRepos()
     */
     userFound: function(jsonUser) {
 
-        s.alertBox.style.display = 'none'
+        alert("hey")
+        GithubApi.settings.alertBox.style.display = 'none'
         name = jsonUser["name"]
         bio = jsonUser["bio"]
         this.searchForRepos(function(jsonRepos) {
@@ -156,7 +161,7 @@ GithubApi = {
     /*
         pre:
                 'name' and 'bio' are strings representing the name and biography of the user
-                'reposList' is a json containing an entry for every repository owned by the user
+                'reposList' is a valid json containing an entry for every repository owned by the user
         post:
                 the HTML code to populate 'user-info-repos' (with the user info and the user repos info) 
                 is generated and added to the div
@@ -164,7 +169,7 @@ GithubApi = {
     */
     buildUserRepos: function(name, bio, reposList) {
 
-        userInfoHtml = `<div class="user-info"><div class="github-icon"><img class="bordered" src="images/github-favicon.png"></div><div class="name-bio"><div id="username">@`+s.inputUsername.value+`</div><div id="full-name">`+name+`</div><div id="user-bio">`+bio+`</div></div></div>`
+        userInfoHtml = `<div class="user-info"><div class="github-icon"><img class="bordered" src="images/github-favicon.png"></div><div class="name-bio"><div id="username">@`+GithubApi.settings.inputUsername.value+`</div><div id="full-name">`+name+`</div><div id="user-bio">`+bio+`</div></div></div>`
         userReposHtml = `<div class="user-repos"><div id="repos-tittle">Repositories</div><ul>`
         for (var i in reposList) {
             repo = reposList[i]
@@ -174,15 +179,12 @@ GithubApi = {
         }
         userReposHtml += `</ul></div>`
 
-        s.userInfoRepos.innerHTML = userInfoHtml + userReposHtml
+        GithubApi.settings.userInfoRepos.innerHTML = userInfoHtml + userReposHtml
 
-        s.userInfoRepos.style.display = 'block'
+        GithubApi.settings.userInfoRepos.style.display = 'block'
 
 
     }
 
 
 }
-
-
-GithubApi.init()
