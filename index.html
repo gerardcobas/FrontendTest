@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Hello!</title>
-</head>
-<body>
+<html lang="en">
 
-<h1>Hello!</h1>
+<head>
+  <title>Github Search - implemented with Vanilla JS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <main id="github-user-search-box">
+    <header>
+      <input type="text" id="searchbox" placeholder="Search username...">
+      <button id="btn-search-user" onClick="github.findUser()">Search</button>
+    </header>
+
+    <section id="user-and-repos">
+      <div id="user-info">
+        <div id="col-left">
+          <img id="github-profile-image" alt="Profile Image">
+        </div>
+        <div id="col-right">
+          @<i><span id="github-username"></span></i><br>
+          <span id="github-fullname"></span><br>
+          <span id="github-userbio"></span>
+        </div>
+      </div>
+      <h3><span id="repoheading">Repositiories</span></h3>
+      <hr id="repo-line">
+      <div id="user-repos"></div>
+    </section>
+
+    <section id="error-message">
+      <span>User does not exist, please search again!</span>
+    </section>
+  </main>
 </body>
+<script src="index.js"></script>
+
 </html>
