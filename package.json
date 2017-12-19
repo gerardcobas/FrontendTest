@@ -1,0 +1,28 @@
+{
+  "name": "JuniorFrontendTest",
+  "version": "1.0.0",
+  "description": "## GOALS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedromrsoares/JuniorFrontendTest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedromrsoares/JuniorFrontendTest/issues"
+  },
+  "homepage": "https://github.com/pedromrsoares/JuniorFrontendTest#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.13.3"
+  }
+}
