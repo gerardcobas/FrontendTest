@@ -24,12 +24,24 @@
           var bio = json.bio;
 
           if(fullname == undefined) { fullname = username; }
+          if(bio == null) { bio = '';}
 
-          var outhtml = `<span>@<a href="${profileurl}" target="_blank">${username}</a></span>
-                         <h2>${fullname}</h2>`;
-          outhtml += '<div class="ghcontent"><div class="avi"><a href="'+profileurl+'" target="_blank"><img src="'+aviurl+'" width="80" height="80" alt="'+username+'"></a></div>';
-          outhtml += '<p>Followers: '+followersnum+' - Following: '+followingnum+'<br>Repos: '+reposnum+'</p></div>';
-          outhtml += '<div class="repolist clearfix">';
+          var outhtml = `<div class="info">
+                        <div class="profile-info">
+                          <div class="profile-pic">
+                            <div>
+                              <a href="${profileurl}" target="_blank"><img class="avatar-pic" src="${aviurl}" width="80" height="80" alt="${username}"></a>
+                            </div>
+                         </div>
+                          <div class="profile-text">
+                            <span>@<a href="${profileurl}" target="_blank">${username}</a></span>
+                            <h2>${fullname}</h2>
+                            <p>${bio}</p>
+                          </div>
+
+                        </div>
+                        <div class="clearfix">
+                        <div class="repos-list">`;
 
           var repositories;
 
@@ -51,9 +63,12 @@
           function outputPageContent() {
             if(repositories.length == 0) { outhtml = outhtml + '<p>No repos!</p></div>'; }
             else {
-              outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
+              outhtml += '<p class="repos-name"><strong>Repositories:</strong></p><ul>';
               for(var i=0; i<repositories.length; i++) {
-                outhtml = outhtml + '<li><a href="'+repositories[i].html_url+'" target="_blank">'+repositories[i].name + '</a></li>';
+                outhtml = outhtml + `<li>
+                                      <a href="${repositories[i].html_url}" target="_blank">${repositories[i].name}
+                                      <img class="icon" src="../images/fork.png">${repositories[i].forks}<img class="icon" src="../images/star.png">${repositories[i].stargazers_count}</a>
+                                    </li>`;
               }
               outhtml = outhtml + '</ul></div>';
             }

@@ -53,3 +53,58 @@ body {
   text-transform: uppercase;
 
 }
+
+.info {
+  margin-top: 2em;
+}
+
+.avatar-pic {
+  width: 25vw;
+  height: auto;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.repos-name {
+  font-size: 1.2em;
+}
+
+.repos-name::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #000;
+  margin-top: .5em;
+  width: 90%;
+}
+
+.repos-list ul li {
+  list-style: none;
+  padding: .5em;
+}
+
+.repos-list ul li::after {
+  content:"";
+  display: block;
+  height: 1px;
+  background: #000;
+  width: 80%;
+  margin-top: .5em;
+}
+
+.repos-list ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.repos-list ul li a img {
+  padding-left: 1em;
+}
+
+.icon {
+  height: 15px;
+}
