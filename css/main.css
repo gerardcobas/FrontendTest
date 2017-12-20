@@ -42,6 +42,16 @@ body {
   border-radius: .5em;
 }
 
+.not-found {
+  background-color: pink;
+  border: 1px solid red;
+  padding: .2em 3em;
+  display: inline-block;
+  border-radius: .5em;
+  margin-top: 1em;
+  color: red;
+}
+
 .app-text {
   display: flex;
   flex-direction: column;
@@ -61,6 +71,7 @@ body {
 .avatar-pic {
   width: 25vw;
   height: auto;
+  padding-right: 2em;
 }
 
 .profile-info {
@@ -107,4 +118,10 @@ body {
 
 .icon {
   height: 15px;
+}
+
+.clearfix {
+  display: block;
+  content: "";
+  clear: both;
 }

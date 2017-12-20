@@ -8,7 +8,7 @@
 
       requestJSON(requri, function(json) {
         if(json.message == "Not Found" || username == '') {
-          document.getElementById('ghapidata').innerHTML = "<h2>No User Info Found</h2>";
+          document.getElementById('ghapidata').innerHTML = "<div class='not-found'><p>Does not exist</p></div>";
         }
 
         else {
@@ -17,10 +17,6 @@
           var username   = json.login;
           var aviurl     = json.avatar_url;
           var profileurl = json.html_url;
-          var location   = json.location;
-          var followersnum = json.followers;
-          var followingnum = json.following;
-          var reposnum     = json.public_repos;
           var bio = json.bio;
 
           if(fullname == undefined) { fullname = username; }
@@ -89,7 +85,7 @@
               callback(JSON.parse(xhr.response));
           }
           else {
-              alert('Request failed.  Returned status of ' + xhr.status);
+              document.getElementById('ghapidata').innerHTML = "<div class='not-found'><p>Does not exist</p></div>";
           }
       };
       xhr.send();
