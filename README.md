@@ -1,4 +1,4 @@
-# JuniorFrontendTest
+# FrontendTest
 
 ## GOALS
 
