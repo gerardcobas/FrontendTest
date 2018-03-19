@@ -2,10 +2,26 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Hello!</title>
+    <title>Github API</title>
+    <script type="text/javascript" src="js/global.js" async></script>
+    <script type="text/javascript" src="js/main.js" async></script>
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 
-<h1>Hello!</h1>
+	<div class="main center">
+
+		<div class="form center">
+			<div class="search">
+				<div class="search-right"><input class="search-btn btn bordered" id="submit" type="button" value="Submit"></div>
+				<div class="search-left"><input class="search-textfield bordered" type="text" id="githubUsername" name="githubUsername" placeholder="Search username..."></div>
+			</div>
+			<div class="bordered" id="alert">Does not exist!</div>
+			<div id="user-info-repos">
+			</div>
+		</div>
+
+	</div>
+
 </body>
 </html>

@@ -1,0 +1,188 @@
+/*  GENERAL STYLING  */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+   word-wrap: break-word;
+
+}
+
+body {
+	background-color: #F0F0F0;
+}
+
+.bordered {
+	border: 1px solid rgba(27,31,35,0.15);
+	border-radius: 5px;
+}
+
+.center {
+    margin: auto;
+}
+
+
+
+/*  MAIN AND SECONDARY CONTAINERS  */
+
+.main {
+	margin-top: 50px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	width: 450px;
+	min-height: 70px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+}
+
+.form {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+}
+
+.form > * {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+
+
+/*  SEARCH BAR */
+
+.btn {
+	background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
+	background-color: #e6ebf1;
+	color: #24292e;
+	font-weight: 600;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.search-left {
+	margin-right: 75px;
+	overflow: hidden;
+}
+
+.search-textfield {
+	width: 100%;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 600;
+}
+
+.search-right {
+	float: right;
+}
+
+
+
+/* ALERT MESSAGE */
+
+#alert {
+	margin-top: 10px;
+    padding: 20px;
+    background-color: #FEDADC;
+    color: #A50000;
+    display: none;
+    border-color: #D9B9BA;
+}
+
+
+/*  USER INFO CONTAINER  */
+
+.user-info {
+	margin-top: 20px;
+	height: 80px;
+}
+
+.user-info > div {
+	display: block;
+	float: left;
+}
+
+.github-icon {
+	height: 75px;
+	width: 75px;
+}
+
+.github-icon > img {
+	width: 100%;
+	height: auto;
+}
+
+.name-bio {
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+#username {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+#full-name {
+	font-weight: 600;
+	font-size: 2em;
+	color: #363636;
+}
+
+#user-bio {
+	font-size: 0.9em;
+}
+
+
+
+/*  USER REPOS CONTAINER  */
+
+.user-repos {
+	margin-top: 20px;
+	max-height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#repos-tittle {
+	font-weight: 600;
+	font-size: 1.2em;
+	border-bottom: 3px solid #707070;
+	padding-bottom: 10px;
+}
+
+.user-repos ul {
+	list-style-type: none;
+	margin-top: 0px;
+	padding-left: 0px;
+}
+
+.user-repos li {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid rgba(27,31,35,0.35);
+}
+
+.repo-name {
+	font-weight: 600;
+	font-size: 1.2em;
+	margin-right: 75px;
+	overflow: hidden;
+}
+
+.repo-info {
+	float: right;
+}
+
+.repo-info > div {
+	display: block;
+	float: left;
+	margin-left: 5px;
+	margin-top: 2px;
+	font-size: 0.9em;
+}
