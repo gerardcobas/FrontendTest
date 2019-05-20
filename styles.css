@@ -1,0 +1,98 @@
+body {
+  background-color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+main#github-user-search-box {
+  margin: auto;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 10px 10px 30px #888888;
+}
+
+/* SEARCHBOX AND BUTTON */
+
+input#searchbox {
+  width: 65%;
+  height: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+button#btn-search-user {
+  font-weight: bold;
+  width: 20%;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+button#btn-search-user:focus {
+  outline: 0;
+}
+
+/* USER AND REPOS RESULT SECTION */
+section#user-and-repos {
+  display: none;
+}
+
+div#user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+img#github-profile-image {
+  height: 80px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+span#github-fullname {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* USER REPO LIST */
+
+span#repoheading,
+div#user-repos,
+hr#repo-line {
+  margin: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 99%;
+}
+
+tr {
+  border-bottom: 1px solid silver;
+  height: 50px;
+}
+
+td.td-right {
+  text-align: right;
+}
+
+img.github-fork,
+img.github-star {
+  height: 11px;
+}
+
+/* DISPLAY ERROR MESSAGE IF NO USER IS FOUND */
+section#error-message {
+  display: none;
+  background: lightcoral;
+  border-radius: 3px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+}
