@@ -1,0 +1,127 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #ddd;
+  font-family: sans-serif;
+}
+
+.bg {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  max-width: 80%;
+  margin: 2em;
+  padding: 2em;
+  border-radius: .25em;
+  background: white;
+  box-shadow: 6px 8px 20px #aaa;
+}
+
+#ghusername {
+  width: 50%;
+  padding: .6em 10%;
+  border-radius: .5em;
+  border-style: groove;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+#ghsubmitbtn {
+  color: black;
+  font-size: .8em;
+  text-decoration: none;
+  background: #eee;
+  padding: .6em 1em;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  border-radius: .5em;
+}
+
+.not-found {
+  background-color: pink;
+  border: 1px solid red;
+  padding: .2em 3em;
+  display: inline-block;
+  border-radius: .5em;
+  margin-top: 1em;
+  color: red;
+}
+
+.app-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.app-text h1, .app-text h2 {
+  text-transform: uppercase;
+
+}
+
+.info {
+  margin-top: 2em;
+}
+
+.avatar-pic {
+  width: 25vw;
+  height: auto;
+  padding-right: 2em;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.repos-name {
+  font-size: 1.2em;
+}
+
+.repos-name::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #000;
+  margin-top: .5em;
+  width: 90%;
+}
+
+.repos-list ul li {
+  list-style: none;
+  padding: .5em;
+}
+
+.repos-list ul li::after {
+  content:"";
+  display: block;
+  height: 1px;
+  background: #000;
+  width: 80%;
+  margin-top: .5em;
+}
+
+.repos-list ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.repos-list ul li a img {
+  padding-left: 1em;
+}
+
+.icon {
+  height: 15px;
+}
+
+.clearfix {
+  display: block;
+  content: "";
+  clear: both;
+}
