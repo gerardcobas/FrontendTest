@@ -3,9 +3,26 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Hello!</title>
+    <link rel="stylesheet" href="public/stylesheets/main.css">
+    <link rel="stylesheet" href="node_modules/octicons/build/octicons.css">
 </head>
 <body>
+  <div id="layout">
+    <h1>Github API Web app</h1>
+    <form method="post">
+      <input id="text" type="text" placeholder="Search username..." required>
+      <button id="ghsubmitbtn" type="submit">Search</button>
+    </form>
 
-<h1>Hello!</h1>
+    <div id="display">
+    </div>
+  </div>
+
+  <script src="src/User.js"></script>
+  <script src="src/Repository.js"></script>
+  <script src="src/APIClient.js"></script>
+  <script src="src/SearchView.js"></script>
+  <script src="src/Controller.js"></script>
+  <script src="src/index.js"></script>
 </body>
 </html>

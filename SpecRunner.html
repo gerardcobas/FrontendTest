@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.5.2</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.5.2/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.5.2/jasmine.css">
+
+  <div id="display">
+  </div>
+
+  <script src="lib/jasmine-2.5.2/jasmine.js"></script>
+  <script src="lib/jasmine-2.5.2/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.5.2/boot.js"></script>
+
+  <!-- include source files here... -->
+  <script src="src/User.js"></script>
+  <script src="src/Repository.js"></script>
+  <script src="src/APIClient.js"></script>
+  <script src="src/SearchView.js"></script>
+  <script src="src/Controller.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/SpecHelper.js"></script>
+  <script src="spec/UserSpec.js"></script>
+  <script src="spec/RepositorySpec.js"></script>
+  <script src="spec/SearchViewSpec.js"></script>
+  <script src="spec/ControllerSpec.js"></script>
+
+</head>
+
+<body>
+
+  <form method="post">
+    <input id="text" type="text" placeholder="Search username..." required>
+    <button type="submit">Search</button>
+  </form>
+
+</body>
+</html>
